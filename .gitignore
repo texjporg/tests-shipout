@@ -1,0 +1,7 @@
+*.dvi
+*.log
+*.aux
+*.toc
+*.out
+*.zip
+*-test.pdf
