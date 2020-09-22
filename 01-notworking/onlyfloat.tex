@@ -1,4 +1,6 @@
-\ifdefined\AddtoHook
+% adding \yoko to hook does not work:
+% => ! Use `\yoko' at top of list.
+\ifdefined\AddToHook
   \AddToHook{shipout/before}{\yoko}
 \else
   \errmessage{Process with [u]platex-dev}\error
