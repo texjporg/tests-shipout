@@ -1,0 +1,8 @@
+%#1platex-dev
+\documentclass{tarticle}
+\AddToHook{shipout/before}[platex]{\yoko} % platex format で指定を想定
+\AddToHook{shipout/before}[test]{\hbox{え}}
+\DeclareHookRule{shipout/before}{platex}{after}{test}
+\begin{document}
+abc
+\end{document}
