@@ -1,0 +1,11 @@
+\RequirePackage{plautopatch}% pxeveryshi
+\RequirePackage{everyshi}
+\documentclass{tarticle}
+\newbox\mybox
+\EveryShipout{%
+  \setbox\mybox\hbox{foo}%
+  \yoko\vbox{\unhbox\mybox}%
+}
+\begin{document}
+bar
+\end{document}
