@@ -1,0 +1,11 @@
+\ifdefined\AddtoHook
+  \AddToHook{shipout/before}{\yoko}
+\else
+  \errmessage{Process with [u]platex-dev}\error
+\fi
+\documentclass{tarticle}
+\begin{document}
+\begin{figure}
+\caption{キャプション}
+\end{figure}
+\end{document}
