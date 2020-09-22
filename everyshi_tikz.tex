@@ -1,0 +1,15 @@
+\ifdefined \AddToHook
+  % plautopatch/issues/12
+  % platex-tools/pull/16
+\else
+  \RequirePackage{plautopatch}% pxpgfrcs, pxeveryshi
+\fi
+\documentclass[dvipdfmx]{tarticle}
+\pagestyle{empty}
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\begin{document}
+
+foo
+
+\end{document}
