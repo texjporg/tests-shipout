@@ -1,0 +1,21 @@
+\ifdefined \AddToHook
+\else
+  \RequirePackage{plautopatch}% pxatbegshi
+\fi
+\documentclass[dvipdfmx]{tbook}
+\usepackage{atbegshi}
+\usepackage{graphicx}
+\begin{document}
+% With `atbegshi' only, the command `\yoko' is required
+% but it is unnecessary when `pxatbegshi' is loaded
+\AtBeginShipout{%\yoko
+  \AtBeginShipoutUpperLeft{%
+    \parbox[t][\paperheight][b]{\paperwidth}{%
+      \includegraphics[width=210truemm,height=297truemm]{example-image-a.png}
+    }%
+  }%
+}
+あ
+\newpage
+い
+\end{document}

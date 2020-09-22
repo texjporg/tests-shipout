@@ -1,0 +1,13 @@
+\ifdefined \AddToHook
+\else
+  \RequirePackage{plautopatch}% pxeveryshi
+\fi
+\documentclass{tarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{tikz}
+\usepackage{pxeveryshi}
+\begin{document}
+\begin{tikzpicture}
+ \draw (0,0) -- (1,2);
+\end{tikzpicture}
+\end{document}
