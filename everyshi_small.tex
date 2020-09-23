@@ -1,4 +1,9 @@
-\RequirePackage{plautopatch}% pxeveryshi
+\ifdefined \AddToHook
+  % plautopatch/issues/12
+  % platex-tools/pull/16
+\else
+  \RequirePackage{plautopatch}% pxpgfrcs, pxeveryshi
+\fi
 \RequirePackage{everyshi}
 \documentclass{tarticle}
 \newbox\mybox
