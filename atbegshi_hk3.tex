@@ -1,0 +1,14 @@
+\ifdefined \AddToHook
+\else
+  \RequirePackage{plautopatch}% pxatbegshi
+\fi
+
+\documentclass{tarticle}
+\RequirePackage{atbegshi}\AtBeginShipoutInit
+\AtBeginShipout{%                                       (3)
+  \AtBeginShipoutUpperLeft{\put(20,-20){HOGE}}%
+}
+
+\begin{document}
+◆\newpage ◆
+\end{document}

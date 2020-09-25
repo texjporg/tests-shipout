@@ -1,0 +1,14 @@
+\ifdefined \AddToHook
+\else
+  \RequirePackage{plautopatch}% pxatbegshi
+\fi
+
+\documentclass{tarticle}
+\RequirePackage{atbegshi}\AtBeginShipoutInit
+\AtBeginShipout{%                                       (4)
+  \AtBeginShipoutUpperLeftForeground{\put(20,-20){HOGE}}%
+}
+
+\begin{document}
+◆\newpage ◆
+\end{document}

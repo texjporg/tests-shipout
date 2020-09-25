@@ -1,0 +1,12 @@
+\ifdefined \AddToHook
+\else
+  \RequirePackage{plautopatch}% pxatbegshi
+\fi
+
+\documentclass{tarticle}
+\RequirePackage{atbegshi}\AtBeginShipoutInit
+\AtBeginShipout{\AtBeginShipoutAddToBoxForeground{VA}}% (2)
+
+\begin{document}
+◆\newpage ◆
+\end{document}
