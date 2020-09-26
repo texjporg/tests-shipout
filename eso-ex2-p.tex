@@ -1,0 +1,40 @@
+% based on `eso-ex2.tex' in eso-pic
+% -- an example for background pictures by Rolf Niepraschk
+
+\listfiles\setcounter{errorcontextlines}{100}
+\documentclass[dvipdfmx]{article}
+
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage{geometry}
+% Tells `dvips' and `pdfTeX' the papersize.
+
+% `rose.eps' from CTAN: macros/generic/boxedeps/
+\newcommand\BackgroundPicture{%
+   \put(0,0){%
+     \parbox[b][\paperheight]{\paperwidth}{%
+       \vfill
+       \centering
+       \includegraphics[width=\paperwidth,height=\paperheight,%
+                        keepaspectratio]{img/rose}%
+       \vfill
+     }}}
+% The picture is centered on the page background
+
+\AddToShipoutPicture{\BackgroundPicture}
+
+\begin{document}
+
+\section{\TeX}
+
+\newpage
+
+\ClearShipoutPicture
+\section{Empty}
+
+\newpage
+
+\AddToShipoutPicture{\BackgroundPicture}
+\section{\LaTeX}
+
+\end{document}
